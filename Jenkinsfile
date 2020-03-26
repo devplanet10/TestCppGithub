@@ -1,12 +1,18 @@
 pipeline {
 
-  agent: any
+  agent any
  
   stages{
   
     stage("Build") {
-      qmake TestCppGithub.pro
-      make
+      steps {
+        echo "Building ..."
+      }
+      steps{
+              qmake TestCppGithub.pro
+              make
+
+      }
     }
   }
   
