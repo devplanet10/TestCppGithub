@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh "qmake TestCppGithub.pro && make "
             }
         }
         stage('Test') {
